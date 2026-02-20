@@ -22,10 +22,10 @@ if col1.button("➕ Incrementa"):
     new_value = current_value + 1
     # Aggiorna il DataFrame e salva sul foglio
     df.loc[df['nome_contatore'] == 'generale', 'valore'] = new_value
-    conn.update(worksheet="Foglio1", data=df)
+    conn.update(worksheet="aaa", data=df)
     st.rerun()
 
 if col2.button("🔄 Reset"):
     df.loc[df['nome_contatore'] == 'generale', 'valore'] = 0
-    conn.update(worksheet="Foglio1", data=df)
+    conn.update(worksheet="aaa", data=df)
     st.rerun()
