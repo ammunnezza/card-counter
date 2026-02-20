@@ -7,7 +7,7 @@ st.title("🔢 Contatore Persistente")
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # 1. Leggi i dati attuali
-df = conn.read(worksheet="Foglio1")
+df = conn.read(worksheet="aaa")
 current_value = int(df.loc[df['nome_contatore'] == 'generale', 'valore'].values[0])
 
 st.metric("Conteggio Attuale", current_value)
