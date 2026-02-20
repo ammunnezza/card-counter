@@ -10,8 +10,6 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(
     worksheet="aaa",
     ttl="10m",
-    usecols=[0, 1],
-    nrows=3,
 )
 current_value = int(df.loc[df['nome_contatore'] == 'generale', 'valore'].values[0])
 
